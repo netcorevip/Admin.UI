@@ -30,22 +30,22 @@ module.exports = {
     // detail: https://cli.vuejs.org/config/#devserver-proxy
     proxy: {
       ['^' + process.env.VUE_APP_BASE_API]: {
-        target: 'http://localhost:8000',
+        target: '#{API_SERVER}#',
         ws: true,
         changeOrigin: true
       },
       '^/upload': {
-        target: 'http://localhost:8000',
+        target: '#{API_SERVER}#',
         ws: true,
         changeOrigin: true
       },
       '^/images': {
-        target: 'http://localhost:8000',
+        target: '#{API_SERVER}#',
         ws: true,
         changeOrigin: true
       },
       '^/swagger': {
-        target: 'http://localhost:8000',
+        target: '#{API_SERVER}#',
         ws: true,
         changeOrigin: true
       }
